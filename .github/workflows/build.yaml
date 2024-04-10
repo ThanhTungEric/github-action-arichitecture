@@ -14,5 +14,5 @@ jobs:
         with:
           type: now
           from_branch: master
-          target_branch: staging
+          target_branch: chithanh
           github_token: ${{ secrets.ACCESS_TOKEN }}
