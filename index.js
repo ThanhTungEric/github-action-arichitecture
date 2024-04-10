@@ -9,3 +9,6 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
     res.send('Hello World');
 })
+app.get('/about', (req, res) => {
+    res.send('Team baby shark doo doo doo doo doo doo');
+})
