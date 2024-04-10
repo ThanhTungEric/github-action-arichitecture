@@ -14,9 +14,9 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Merge master -> chithanh
-        uses: chithanh/merge-branch@master
+        uses: chithanh/git-merge-action@master
         with:
           type: now
           from_branch: master
           target_branch: chithanh
-          github_token: ${{ secrets.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 }}
+          github_token: ${{ secrets.ACCESS_TOKEN }}
