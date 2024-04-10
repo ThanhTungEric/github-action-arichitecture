@@ -11,14 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
+
+      - name: Merge master -> chithanh
+        uses: chithanh/merge-branch@master
         with:
-          ref: chithanh
-      - name: Merge changes from master
-        run: |
-          git config --global user.email "thanh89508@gmail.com"
-          git config --global user.name "babysharkdududududududu"
-          git fetch origin master
-          git merge --ff-only origin/master
-          git push origin chithanh
+          type: now
+          from_branch: master
+          target_branch: chithanh
+          github_token: ${{ secrets.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 }}
