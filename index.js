@@ -12,3 +12,6 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.send('Team baby shark doo doo doo doo doo doo');
 })
+app.get('/contact', (req, res) => {
+    res.send('Contact us at: thanhtungeric@gmail.com');
+})
