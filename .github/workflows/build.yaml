@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Merge master -> chithanh
-        uses: chithanh/merge-branch@v1
+        uses: devmasx/merge-branch@v1
         with:
           type: now
           from_branch: master
