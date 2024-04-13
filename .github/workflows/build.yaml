@@ -1,18 +1,19 @@
-name: nodejs-hello-world
+name: 🚀 Deploy website on push
 on:
   push:
     branches:
-      - 'master'
+      - master
 jobs:
-  sync-branch:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-
-      - name: Merge master -> chithanh
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          from_branch: master
-          target_branch: chithanh
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ftp.samkirkland.com
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
